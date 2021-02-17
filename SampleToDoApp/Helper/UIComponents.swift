@@ -20,7 +20,7 @@ struct UIComponents {
     //ナビゲーションバー色指定
     static func setupNavigationBar() {
         UINavigationBar.appearance().tintColor = .systemGray6
-        UINavigationBar.appearance().barTintColor = .systemTeal
+        UINavigationBar.appearance().barTintColor = .systemGreen
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     

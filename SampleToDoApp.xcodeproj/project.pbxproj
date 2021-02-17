@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		D43A25CD25DBB9E900EE1F1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25CC25DBB9E900EE1F1F /* AppDelegate.swift */; };
 		D43A25CF25DBB9E900EE1F1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25CE25DBB9E900EE1F1F /* SceneDelegate.swift */; };
-		D43A25D125DBB9E900EE1F1F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25D025DBB9E900EE1F1F /* ContentView.swift */; };
 		D43A25D325DBB9EC00EE1F1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43A25D225DBB9EC00EE1F1F /* Assets.xcassets */; };
 		D43A25D625DBB9EC00EE1F1F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43A25D525DBB9EC00EE1F1F /* Preview Assets.xcassets */; };
 		D43A25D925DBB9EC00EE1F1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D43A25D725DBB9EC00EE1F1F /* LaunchScreen.storyboard */; };
 		D43A25E725DCED5E00EE1F1F /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25E625DCED5E00EE1F1F /* UIComponents.swift */; };
+		D43A25EE25DD127100EE1F1F /* MainToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25ED25DD127100EE1F1F /* MainToDoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D43A25C925DBB9E900EE1F1F /* SampleToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43A25CC25DBB9E900EE1F1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D43A25CE25DBB9E900EE1F1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D43A25D025DBB9E900EE1F1F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D43A25D225DBB9EC00EE1F1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D43A25D525DBB9EC00EE1F1F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D43A25D825DBB9EC00EE1F1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D43A25DA25DBB9ED00EE1F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D43A25E625DCED5E00EE1F1F /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
+		D43A25ED25DD127100EE1F1F /* MainToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToDoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				D43A25CC25DBB9E900EE1F1F /* AppDelegate.swift */,
 				D43A25CE25DBB9E900EE1F1F /* SceneDelegate.swift */,
-				D43A25D025DBB9E900EE1F1F /* ContentView.swift */,
+				D43A25F025DD127900EE1F1F /* View */,
 				D43A25E925DCED6700EE1F1F /* Helper */,
 				D43A25D225DBB9EC00EE1F1F /* Assets.xcassets */,
 				D43A25D725DBB9EC00EE1F1F /* LaunchScreen.storyboard */,
@@ -84,6 +84,14 @@
 				D43A25E625DCED5E00EE1F1F /* UIComponents.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		D43A25F025DD127900EE1F1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D43A25ED25DD127100EE1F1F /* MainToDoView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D43A25CD25DBB9E900EE1F1F /* AppDelegate.swift in Sources */,
+				D43A25EE25DD127100EE1F1F /* MainToDoView.swift in Sources */,
 				D43A25CF25DBB9E900EE1F1F /* SceneDelegate.swift in Sources */,
-				D43A25D125DBB9E900EE1F1F /* ContentView.swift in Sources */,
 				D43A25E725DCED5E00EE1F1F /* UIComponents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

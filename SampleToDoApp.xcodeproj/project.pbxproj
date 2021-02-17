@@ -15,6 +15,7 @@
 		D43A25E725DCED5E00EE1F1F /* UIComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25E625DCED5E00EE1F1F /* UIComponents.swift */; };
 		D43A25EE25DD127100EE1F1F /* MainToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25ED25DD127100EE1F1F /* MainToDoView.swift */; };
 		D43A25F825DD309800EE1F1F /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25F725DD309800EE1F1F /* ToDoListView.swift */; };
+		D43A260525DD7BA200EE1F1F /* ToDoCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A260425DD7BA200EE1F1F /* ToDoCreateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D43A25E625DCED5E00EE1F1F /* UIComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponents.swift; sourceTree = "<group>"; };
 		D43A25ED25DD127100EE1F1F /* MainToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToDoView.swift; sourceTree = "<group>"; };
 		D43A25F725DD309800EE1F1F /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
+		D43A260425DD7BA200EE1F1F /* ToDoCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCreateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				D43A25ED25DD127100EE1F1F /* MainToDoView.swift */,
 				D43A25F725DD309800EE1F1F /* ToDoListView.swift */,
+				D43A260425DD7BA200EE1F1F /* ToDoCreateView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				D43A25CD25DBB9E900EE1F1F /* AppDelegate.swift in Sources */,
 				D43A25EE25DD127100EE1F1F /* MainToDoView.swift in Sources */,
+				D43A260525DD7BA200EE1F1F /* ToDoCreateView.swift in Sources */,
 				D43A25CF25DBB9E900EE1F1F /* SceneDelegate.swift in Sources */,
 				D43A25E725DCED5E00EE1F1F /* UIComponents.swift in Sources */,
 				D43A25F825DD309800EE1F1F /* ToDoListView.swift in Sources */,

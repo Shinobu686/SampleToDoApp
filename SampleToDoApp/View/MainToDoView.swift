@@ -31,7 +31,7 @@ struct MainToDoView: View {
                             Text("検索")
                                 .frame(width: UIComponents.screenWidth / 6, height: UIComponents.screenWidth / 13)
                                 .foregroundColor(.white)
-                                .background(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
+                                .background(Color(#colorLiteral(red: 0.01274208724, green: 0.5080561042, blue: 0.9843279719, alpha: 1)))
                                 .cornerRadius(10)
                         }
                     }.padding(.top, 30)

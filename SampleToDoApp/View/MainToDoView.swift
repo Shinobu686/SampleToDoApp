@@ -10,7 +10,7 @@ import SwiftUI
 struct MainToDoView: View {
     
     @State var searchWord = ""
-    @State var flag = false
+    @State var modalOpened = false
     
     init() {
         UIComponents.setupNavigationBar()
@@ -57,18 +57,17 @@ struct MainToDoView: View {
                             
                             Spacer()
                             
-                            NavigationLink(destination: ToDoCreateView(), isActive: $flag) {
-                                EmptyView()
-                            }
-                            
                             Button(action: {
-                                self.flag = true
+                                self.modalOpened.toggle()
                             }) {
                                 Text("+")
                                     .font(.system(.largeTitle))
                                     .frame(width: UIComponents.screenWidth / 5, height: UIComponents.screenWidth / 5)
                                     .foregroundColor(Color.white)
                                     .padding(.bottom, 7)
+                            }
+                            .sheet(isPresented: $modalOpened) {
+                                ToDoCreateView()
                             }
                             .background(Color.green)
                             .cornerRadius(70)

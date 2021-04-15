@@ -14,7 +14,8 @@ struct ListRowView: View {
     var body: some View {
         
         HStack {
-            Image(systemName: "checkmark.circle")
+            Image(systemName: item.isCompleted ? "checkmark.circle" : "circle")
+                .foregroundColor(item.isCompleted ? Color.green : Color.red)
             Text(item.memo)
             Spacer()
         }
@@ -23,8 +24,12 @@ struct ListRowView: View {
 
 struct ListRowView_Previews: PreviewProvider {
     static var previews: some View {
-        ListRowView(item: ItemModel(memo: "テストテキスト", isCompleted: true))
-            //細かいパーツのプレビューを見やすくする
-            .previewLayout(.sizeThatFits)
+        //Viewを二つ並べて比較する
+        Group {
+            ListRowView(item: ItemModel(memo: "テストテキスト", isCompleted: true))
+            ListRowView(item: ItemModel(memo: "テストテキスト", isCompleted: false))
+        } //細かいパーツのプレビューを見やすくする
+        .previewLayout(.sizeThatFits)
+           
     }
 }

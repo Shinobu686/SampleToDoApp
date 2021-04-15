@@ -54,8 +54,7 @@ struct MainToDoView: View {
                         
                         List {
                             ForEach(items) { item in
-                                Text("テストテキスト")
-//                                ListRowView(memo: item)
+                                ListRowView(item: item)
                             }
                         }.listStyle(PlainListStyle())
                         

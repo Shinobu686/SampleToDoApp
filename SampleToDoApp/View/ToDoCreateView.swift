@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ToDoCreateView: View {
     
-    @State var memo = ""
+    @State var textFieldText = ""
     
     var body: some View {
         VStack {
             VStack(spacing: 50) {
-                TextField("メモを入力", text: $memo)
+                TextField("メモを入力", text: $textFieldText)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: UIComponents.screenWidth / 1.2)
                 

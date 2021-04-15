@@ -55,9 +55,8 @@ struct MainToDoView: View {
                         List {
                             ForEach(items) { item in
                                 ListRowView(item: item)
-                            }
+                            }.onDelete(perform: deleteItem)
                         }.listStyle(PlainListStyle())
-                        
                     }.padding(.top)
                     
                     VStack {
@@ -92,6 +91,9 @@ struct MainToDoView: View {
             }
         }
     }
+    func deleteItem(offsets: IndexSet) {
+            items.remove(atOffsets: offsets)
+        }
 }
 
 struct MainToDoView_Previews: PreviewProvider {

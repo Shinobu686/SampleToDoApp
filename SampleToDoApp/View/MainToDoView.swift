@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct MainToDoView: View {
+    @State var items: [ItemModel] = [
+        ItemModel(memo: "テストテキスト1", isCompleted: false),
+        ItemModel(memo: "テストテキスト2", isCompleted: true),
+        ItemModel(memo: "テストテキスト3", isCompleted: false)
+    ]
     
     @State var searchWord = ""
     @State var modalOpened = false
@@ -35,7 +40,7 @@ struct MainToDoView: View {
                                 .cornerRadius(10)
                         }
                     }.padding(.top, 30)
-                    .navigationBarTitle("やること", displayMode: .inline)
+                    .navigationBarTitle("リスト", displayMode: .inline)
                     .navigationBarItems(trailing: Button(action:{
                         
                     }){
@@ -47,7 +52,13 @@ struct MainToDoView: View {
                             .font(.largeTitle)
                             .padding()
                         
-                        ToDoListView()
+                        List {
+                            ForEach(items) { item in
+                                Text("テストテキスト")
+//                                ListRowView(memo: item)
+                            }
+                        }.listStyle(PlainListStyle())
+                        
                     }.padding(.top)
                     
                     VStack {

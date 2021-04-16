@@ -41,11 +41,7 @@ struct MainToDoView: View {
                         }
                     }.padding(.top, 30)
                     .navigationBarTitle("リスト", displayMode: .inline)
-                    .navigationBarItems(trailing: Button(action:{
-                        
-                    }){
-                        Text("編集")
-                    })
+                    .navigationBarItems(trailing: EditButton())
                     
                     VStack(alignment: .leading,spacing: 1) {
                         Text("ToDo一覧")
@@ -55,7 +51,9 @@ struct MainToDoView: View {
                         List {
                             ForEach(items) { item in
                                 ListRowView(item: item)
-                            }.onDelete(perform: deleteItem)
+                            }
+                            .onDelete(perform: deleteItem)
+                            .onMove(perform: moveItem)
                         }.listStyle(PlainListStyle())
                     }.padding(.top)
                     
@@ -91,9 +89,17 @@ struct MainToDoView: View {
             }
         }
     }
+    
+    //行削除メソッド
     func deleteItem(offsets: IndexSet) {
             items.remove(atOffsets: offsets)
         }
+    
+    //行入れ替えメソッド
+    func moveItem(from: IndexSet, to: Int) {
+        items.move(fromOffsets: from, toOffset: to)
+    }
+    
 }
 
 struct MainToDoView_Previews: PreviewProvider {

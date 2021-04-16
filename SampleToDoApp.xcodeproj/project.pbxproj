@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D425C62C26282EB200D96EB1 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D425C62B26282EB200D96EB1 /* ItemModel.swift */; };
+		D425C6312629C3E700D96EB1 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D425C6302629C3E700D96EB1 /* ToDoListView.swift */; };
+		D425C6382629C59C00D96EB1 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D425C6372629C59C00D96EB1 /* ListViewModel.swift */; };
 		D43A25CD25DBB9E900EE1F1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25CC25DBB9E900EE1F1F /* AppDelegate.swift */; };
 		D43A25CF25DBB9E900EE1F1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25CE25DBB9E900EE1F1F /* SceneDelegate.swift */; };
 		D43A25D325DBB9EC00EE1F1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D43A25D225DBB9EC00EE1F1F /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		D425C62B26282EB200D96EB1 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		D425C6302629C3E700D96EB1 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
+		D425C6372629C59C00D96EB1 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		D43A25C925DBB9E900EE1F1F /* SampleToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D43A25CC25DBB9E900EE1F1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D43A25CE25DBB9E900EE1F1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +59,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D425C6362629C54C00D96EB1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D425C6372629C59C00D96EB1 /* ListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D43A25C025DBB9E900EE1F1F = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +88,7 @@
 			children = (
 				D43A25CC25DBB9E900EE1F1F /* AppDelegate.swift */,
 				D43A25CE25DBB9E900EE1F1F /* SceneDelegate.swift */,
+				D425C6362629C54C00D96EB1 /* ViewModel */,
 				D425C62526282E4C00D96EB1 /* Model */,
 				D43A25F025DD127900EE1F1F /* View */,
 				D43A25E925DCED6700EE1F1F /* Helper */,
@@ -108,6 +121,7 @@
 			children = (
 				D43A25ED25DD127100EE1F1F /* MainToDoView.swift */,
 				D43A25F725DD309800EE1F1F /* ListRowView.swift */,
+				D425C6302629C3E700D96EB1 /* ToDoListView.swift */,
 				D43A260425DD7BA200EE1F1F /* ToDoCreateView.swift */,
 				D43A261625E0E63100EE1F1F /* UseUserDefaults.swift */,
 			);
@@ -187,6 +201,8 @@
 				D43A25CD25DBB9E900EE1F1F /* AppDelegate.swift in Sources */,
 				D43A25EE25DD127100EE1F1F /* MainToDoView.swift in Sources */,
 				D425C62C26282EB200D96EB1 /* ItemModel.swift in Sources */,
+				D425C6382629C59C00D96EB1 /* ListViewModel.swift in Sources */,
+				D425C6312629C3E700D96EB1 /* ToDoListView.swift in Sources */,
 				D43A260525DD7BA200EE1F1F /* ToDoCreateView.swift in Sources */,
 				D43A261725E0E63200EE1F1F /* UseUserDefaults.swift in Sources */,
 				D43A25CF25DBB9E900EE1F1F /* SceneDelegate.swift in Sources */,

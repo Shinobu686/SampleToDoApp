@@ -8,11 +8,6 @@
 import SwiftUI
 
 struct MainToDoView: View {
-    @State var items: [ItemModel] = [
-        ItemModel(memo: "テストテキスト1", isCompleted: false),
-        ItemModel(memo: "テストテキスト2", isCompleted: true),
-        ItemModel(memo: "テストテキスト3", isCompleted: false)
-    ]
     
     @State var searchWord = ""
     @State var modalOpened = false
@@ -48,13 +43,8 @@ struct MainToDoView: View {
                             .font(.largeTitle)
                             .padding()
                         
-                        List {
-                            ForEach(items) { item in
-                                ListRowView(item: item)
-                            }
-                            .onDelete(perform: deleteItem)
-                            .onMove(perform: moveItem)
-                        }.listStyle(PlainListStyle())
+                        ToDoListView()
+                        
                     }.padding(.top)
                     
                     VStack {
@@ -89,17 +79,6 @@ struct MainToDoView: View {
             }
         }
     }
-    
-    //行削除メソッド
-    func deleteItem(offsets: IndexSet) {
-            items.remove(atOffsets: offsets)
-        }
-    
-    //行入れ替えメソッド
-    func moveItem(from: IndexSet, to: Int) {
-        items.move(fromOffsets: from, toOffset: to)
-    }
-    
 }
 
 struct MainToDoView_Previews: PreviewProvider {

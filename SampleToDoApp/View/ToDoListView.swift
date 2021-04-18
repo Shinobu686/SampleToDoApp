@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ToDoListView: View {
     
-    @ObservedObject var ListVM = ListViewModel()
+    @EnvironmentObject var ListVM: ListViewModel
     
     var body: some View {
         
@@ -26,5 +26,6 @@ struct ToDoListView: View {
 struct ToDoListView_Previews: PreviewProvider {
     static var previews: some View {
         ToDoListView()
+            .environmentObject(ListViewModel())
     }
 }

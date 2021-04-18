@@ -11,6 +11,7 @@ struct MainToDoView: View {
     
     @State var searchWord = ""
     @State var modalOpened = false
+    @State var flag = false
     
     init() {
         UIComponents.setupNavigationBar()
@@ -50,6 +51,7 @@ struct MainToDoView: View {
                     VStack {
                         Spacer()
                         
+                        
                         HStack {
                             
                             Spacer()
@@ -63,6 +65,9 @@ struct MainToDoView: View {
                                     .foregroundColor(Color.white)
                                     .padding(.bottom, 7)
                             }
+                            
+                            
+                            
                             .sheet(isPresented: $modalOpened) {
                                 ToDoCreateView()
                             }
@@ -74,15 +79,17 @@ struct MainToDoView: View {
                                     x: 3,
                                     y: 3)
                         }
+                        }
                     }
                 }
-            }
+        }
         }
     }
-}
+
 
 struct MainToDoView_Previews: PreviewProvider {
     static var previews: some View {
         MainToDoView()
+            .environmentObject(ListViewModel())
     }
 }

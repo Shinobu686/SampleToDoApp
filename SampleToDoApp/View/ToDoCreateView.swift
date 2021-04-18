@@ -11,6 +11,9 @@ struct ToDoCreateView: View {
     
     @State var textFieldText = ""
     
+    @EnvironmentObject var ListVM: ListViewModel
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         VStack {
             VStack(spacing: 50) {
@@ -19,7 +22,8 @@ struct ToDoCreateView: View {
                     .frame(width: UIComponents.screenWidth / 1.2)
                 
                 Button(action: {
-                    
+                    ListVM.addItem(title: textFieldText)
+                    self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("保存")
                         .fontWeight(.bold)
@@ -45,5 +49,6 @@ struct ToDoCreateView: View {
 struct ToDoCreateView_Previews: PreviewProvider {
     static var previews: some View {
         ToDoCreateView()
+            .environmentObject(ListViewModel())
     }
 }

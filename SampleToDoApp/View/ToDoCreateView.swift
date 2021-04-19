@@ -29,10 +29,10 @@ struct ToDoCreateView: View {
                         .fontWeight(.bold)
                         .frame(width: UIComponents.screenWidth / 1.8, height: UIComponents.screenWidth / 7)
                         .font(.title2)
-                        .foregroundColor(.white)
-                        .background(Color(#colorLiteral(red: 0.01274208724, green: 0.5080561042, blue: 0.9843279719, alpha: 1)))
+                        .foregroundColor(textFieldText.isEmpty ? Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)) : .white)
+                        .background(textFieldText.isEmpty ? Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)) : Color(#colorLiteral(red: 0.01274208724, green: 0.5080561042, blue: 0.9843279719, alpha: 1)))
                         .cornerRadius(30)
-                }
+                }.disabled(textFieldText.isEmpty)
             }
             .navigationBarTitle("新規作成", displayMode: .inline)
         }

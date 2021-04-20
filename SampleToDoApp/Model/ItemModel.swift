@@ -11,4 +11,10 @@ struct ItemModel: Identifiable {
     var id: String = UUID().uuidString
     var memo: String
     var isCompleted: Bool
+    
+    init(id: String = UUID().uuidString, memo: String, isCompleted: Bool) {
+        self.id = id
+        self.memo = memo
+        self.isCompleted = isCompleted
+    }
 }

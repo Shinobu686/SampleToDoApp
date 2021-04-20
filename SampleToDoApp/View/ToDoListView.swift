@@ -16,6 +16,11 @@ struct ToDoListView: View {
         List {
             ForEach(ListVM.items) { item in
                 ListRowView(item: item)
+                    .onTapGesture {
+                        withAnimation(.linear) {
+                            ListVM.updateItem(item: item)
+                        }
+                    }
             }
             .onDelete(perform: ListVM.deleteItem)
             .onMove(perform: ListVM.moveItem)

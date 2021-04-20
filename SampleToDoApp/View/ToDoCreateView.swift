@@ -22,7 +22,7 @@ struct ToDoCreateView: View {
                     .frame(width: UIComponents.screenWidth / 1.2)
                 
                 Button(action: {
-                    ListVM.addItem(title: textFieldText)
+                    ListVM.addItem(memo: textFieldText)
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("保存")

@@ -26,10 +26,16 @@ class ListViewModel: ObservableObject {
     }
     
     //メモ追加メソッド
-    func addItem(title: String) {
-        let newItem = ItemModel(memo: title, isCompleted: false)
+    func addItem(memo: String) {
+        let newItem = ItemModel(memo: memo, isCompleted: false)
         items.append(newItem)
     }
     
+    // 配列itemsを検索して一致するインデックス番号を探す
+    func updateItem(item: ItemModel) {
+        if let index = items.firstIndex(where: { $0.id == item.id }) {
+            items[index] = ItemModel(id:item.id ,memo: item.memo, isCompleted: !item.isCompleted)
+        }
+    }
     
 }

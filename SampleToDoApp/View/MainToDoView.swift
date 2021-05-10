@@ -9,9 +9,10 @@ import SwiftUI
 
 struct MainToDoView: View {
     
-    @State var searchWord = ""
+    //    @State var searchText = ""
     @State var modalOpened = false
     @State var flag = false
+    
     
     init() {
         UIComponents.setupNavigationBar()
@@ -21,24 +22,6 @@ struct MainToDoView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    HStack {
-                        TextField("キーワードを入力", text: $searchWord)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: UIComponents.screenWidth / 1.4)
-                        
-                        Button(action:{
-                            //処理
-                        }) {
-                            Text("検索")
-                                .frame(width: UIComponents.screenWidth / 6, height: UIComponents.screenWidth / 13)
-                                .foregroundColor(.white)
-                                .background(Color(#colorLiteral(red: 0.01274208724, green: 0.5080561042, blue: 0.9843279719, alpha: 1)))
-                                .cornerRadius(10)
-                        }
-                    }.padding(.top, 30)
-                    .navigationBarTitle("リスト", displayMode: .inline)
-                    .navigationBarItems(trailing: EditButton())
-                    
                     VStack(alignment: .leading,spacing: 1) {
                         Text("ToDo一覧")
                             .font(.largeTitle)
@@ -51,9 +34,7 @@ struct MainToDoView: View {
                     VStack {
                         Spacer()
                         
-                        
                         HStack {
-                            
                             Spacer()
                             
                             Button(action: {
@@ -65,9 +46,6 @@ struct MainToDoView: View {
                                     .foregroundColor(Color.white)
                                     .padding(.bottom, 7)
                             }
-                            
-                            
-                            
                             .sheet(isPresented: $modalOpened) {
                                 ToDoCreateView()
                             }
@@ -79,12 +57,14 @@ struct MainToDoView: View {
                                     x: 3,
                                     y: 3)
                         }
-                        }
                     }
                 }
-        }
+                .navigationBarTitle("リスト", displayMode: .inline)
+                .navigationBarItems(trailing: EditButton())
+            }
         }
     }
+}
 
 
 struct MainToDoView_Previews: PreviewProvider {

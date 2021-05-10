@@ -19,6 +19,7 @@
 		D43A25EE25DD127100EE1F1F /* MainToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25ED25DD127100EE1F1F /* MainToDoView.swift */; };
 		D43A25F825DD309800EE1F1F /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A25F725DD309800EE1F1F /* ListRowView.swift */; };
 		D43A260525DD7BA200EE1F1F /* ToDoCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A260425DD7BA200EE1F1F /* ToDoCreateView.swift */; };
+		D4B3310C2647E569003D772E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B3310B2647E569003D772E /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		D43A25ED25DD127100EE1F1F /* MainToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToDoView.swift; sourceTree = "<group>"; };
 		D43A25F725DD309800EE1F1F /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		D43A260425DD7BA200EE1F1F /* ToDoCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCreateView.swift; sourceTree = "<group>"; };
+		D4B3310B2647E569003D772E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				D43A25F725DD309800EE1F1F /* ListRowView.swift */,
 				D425C6302629C3E700D96EB1 /* ToDoListView.swift */,
 				D43A260425DD7BA200EE1F1F /* ToDoCreateView.swift */,
+				D4B3310B2647E569003D772E /* SearchBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				D425C6312629C3E700D96EB1 /* ToDoListView.swift in Sources */,
 				D43A260525DD7BA200EE1F1F /* ToDoCreateView.swift in Sources */,
 				D43A25CF25DBB9E900EE1F1F /* SceneDelegate.swift in Sources */,
+				D4B3310C2647E569003D772E /* SearchBar.swift in Sources */,
 				D43A25E725DCED5E00EE1F1F /* UIComponents.swift in Sources */,
 				D43A25F825DD309800EE1F1F /* ListRowView.swift in Sources */,
 			);

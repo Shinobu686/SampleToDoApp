@@ -9,9 +9,10 @@ import SwiftUI
 
 struct MainToDoView: View {
     
-    @State var searchText = ""
+    //    @State var searchText = ""
     @State var modalOpened = false
     @State var flag = false
+    
     
     init() {
         UIComponents.setupNavigationBar()
@@ -21,13 +22,6 @@ struct MainToDoView: View {
         NavigationView {
             ZStack {
                 VStack {
-                    
-                    SearchBar(text: $searchText, placeholder: "検索ワード")
-                        .padding()
-                    
-                    Divider()
-                    
-                    
                     VStack(alignment: .leading,spacing: 1) {
                         Text("ToDo一覧")
                             .font(.largeTitle)
@@ -40,9 +34,7 @@ struct MainToDoView: View {
                     VStack {
                         Spacer()
                         
-                        
                         HStack {
-                            
                             Spacer()
                             
                             Button(action: {
@@ -54,9 +46,6 @@ struct MainToDoView: View {
                                     .foregroundColor(Color.white)
                                     .padding(.bottom, 7)
                             }
-                            
-                            
-                            
                             .sheet(isPresented: $modalOpened) {
                                 ToDoCreateView()
                             }

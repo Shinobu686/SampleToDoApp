@@ -10,21 +10,26 @@ import SwiftUI
 struct ToDoListView: View {
     
     @EnvironmentObject var ListVM: ListViewModel
+    @State var searchText = ""
     
     var body: some View {
         
-        List {
-            ForEach(ListVM.items) { item in
-                ListRowView(item: item)
-                    .onTapGesture {
-                        withAnimation(.linear) {
-                            ListVM.updateItem(item: item)
+        VStack {
+            SearchBar(text: $searchText)
+                .padding()
+            List {
+                ForEach(ListVM.items.filter({searchText.isEmpty ? true : $0.memo.contains(searchText)})) { item in
+                    ListRowView(item: item)
+                        .onTapGesture {
+                            withAnimation(.linear) {
+                                ListVM.updateItem(item: item)
+                            }
                         }
-                    }
-            }
-            .onDelete(perform: ListVM.deleteItem)
-            .onMove(perform: ListVM.moveItem)
-        }.listStyle(PlainListStyle())
+                }
+                .onDelete(perform: ListVM.deleteItem)
+                .onMove(perform: ListVM.moveItem)
+            }.listStyle(PlainListStyle())
+        }
     }
 }
 

@@ -7,39 +7,34 @@
 
 import SwiftUI
 
-struct SearchBar: UIViewRepresentable {
-    
+struct SearchBar: View {
     @Binding var text: String
-    var placeholder: String
-    var searchBarStyle = UISearchBar.Style.minimal
-    var autocapitalizationType = UITextAutocapitalizationType.none
+    @State private var isEditing = false
     
-    func makeCoordinator() -> SearchBar.Coordinator {
-        return Coordinator(text: $text)
-    }
-    
-    func makeUIView(context: UIViewRepresentableContext<SearchBar>) -> UISearchBar {
-        let searchBar = UISearchBar(frame: .zero)
-        searchBar.delegate = context.coordinator
-        searchBar.searchBarStyle  = searchBarStyle
-        searchBar.autocapitalizationType = autocapitalizationType
-        searchBar.placeholder = placeholder
-        return searchBar
-    }
-    
-    func updateUIView(_ uiView: UISearchBar, context: UIViewRepresentableContext<SearchBar>) {
-        uiView.text = text
-    }
-    
-    class Coordinator: NSObject, UISearchBarDelegate {
-        @Binding var text: String
-        
-        init(text: Binding<String>) {
-            _text = text
-        }
-        
-        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-            text = searchText
+    var body: some View {
+        HStack {
+            TextField("Search ...", text: $text)
+                .padding(7)
+                .padding(.horizontal, 25)
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+                .padding(.horizontal, 10)
+                .onTapGesture {
+                    self.isEditing = true
+                }
+            
+            if isEditing {
+                Button(action: {
+                    self.isEditing = false
+                    self.text = ""
+                    
+                }) {
+                    Text("Cancel")
+                }
+                .padding(.trailing, 10)
+                .transition(.move(edge: .trailing))
+                .animation(.default)
+            }
         }
     }
 }

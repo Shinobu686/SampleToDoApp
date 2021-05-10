@@ -1,1 +1,1 @@
-# SerachToDo
+# SearchToDo
